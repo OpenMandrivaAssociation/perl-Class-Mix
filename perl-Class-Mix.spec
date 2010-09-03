@@ -14,11 +14,13 @@ Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstr
 BuildRequires: perl(Carp)
 BuildRequires: perl(Exporter)
 BuildRequires: perl(Module::Build)
+BuildRequires: perl(Module::Build::Compat)
+BuildRequires: perl(Params::Classify)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(parent)
 BuildRequires: perl(strict)
 BuildRequires: perl(warnings)
-BuildRequires: perl(Module::Build::Compat)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -31,11 +33,10 @@ The 'mix_class' function provided by this module dynamically generates
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -49,5 +50,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
