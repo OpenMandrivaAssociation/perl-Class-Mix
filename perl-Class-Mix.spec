@@ -1,5 +1,5 @@
 %define upstream_name    Class-Mix
-%define upstream_version 0.003
+%define upstream_version 0.004
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
