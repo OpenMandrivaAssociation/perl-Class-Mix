@@ -50,3 +50,22 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Sat Apr 16 2011 Funda Wang <fwang@mandriva.org> 0.4.0-2mdv2011.0
++ Revision: 653557
+- rebuild for updated spec-helper
+
+* Fri Sep 03 2010 Jérôme Quelin <jquelin@mandriva.org> 0.4.0-1mdv2011.0
++ Revision: 575611
+- adding missing buildrequires:
+- update to 0.004
+
+* Sun Nov 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.3.0-1mdv2011.0
++ Revision: 471087
+- import perl-Class-Mix
+
+
+* Sun Nov 29 2009 cpan2dist 0.003-1mdv
+- initial mdv release, generated with cpan2dist
