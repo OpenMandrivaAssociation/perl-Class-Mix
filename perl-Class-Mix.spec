@@ -1,15 +1,15 @@
 %define upstream_name    Class-Mix
-%define upstream_version 0.004
+%define upstream_version 0.005
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    1
 
 Summary:    Dynamic class mixing
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Class/Class-Mix-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Carp)
 BuildRequires: perl(Exporter)
@@ -69,3 +69,4 @@ rm -rf %buildroot
 
 * Sun Nov 29 2009 cpan2dist 0.003-1mdv
 - initial mdv release, generated with cpan2dist
+
