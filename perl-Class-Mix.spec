@@ -1,15 +1,15 @@
 %define upstream_name    Class-Mix
-%define upstream_version 0.005
+%define upstream_version 0.006
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Dynamic class mixing
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/Class-Mix-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Class-Mix
+Source0:    https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Class-Mix-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
