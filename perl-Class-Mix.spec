@@ -1,7 +1,7 @@
 %define upstream_name    Class-Mix
 Name:       perl-%{upstream_name}
 Version:    0.006
-Release:    2
+Release:    3
 
 Summary:    Dynamic class mixing
 License:    GPL+ or Artistic
@@ -31,7 +31,7 @@ The 'mix_class' function provided by this module dynamically generates
 %setup -q -n %{upstream_name}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -41,9 +41,8 @@ The 'mix_class' function provided by this module dynamically generates
 rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
+find %{buildroot} -type f -name '*.pm' -exec chmod -x {} +
+if [ -d %{buildroot}%{_bindir} ]; then find %{buildroot}%{_bindir} -type f -exec chmod 755 {} +; fi
 %files
 %defattr(-,root,root)
 %doc Changes README
