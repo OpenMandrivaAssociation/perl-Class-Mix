@@ -1,7 +1,7 @@
 %define upstream_name    Class-Mix
 Name:       perl-%{upstream_name}
-Version:    0.006
-Release:    3
+Version:	0.006
+Release:    1
 
 Summary:    Dynamic class mixing
 License:    GPL+ or Artistic
